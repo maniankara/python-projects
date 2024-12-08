@@ -1,0 +1,8 @@
+---
+  links:
+  websites:
+  - url: "http://quotes.toscrape.com/page/1/"
+    types: []
+  - url: "http://quotes.toscrape.com/page/1/"
+    types:
+      - sitemap.xml

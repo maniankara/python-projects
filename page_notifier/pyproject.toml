@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "page_notifier"
+version = "0.1.0"
+description = "Notifies web pages changes"
+authors = ["Anoop Vijayan <maniankara@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyyaml = "^6.0.2"
+scrapy = "^2.12.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
