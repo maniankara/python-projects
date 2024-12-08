@@ -1,0 +1,27 @@
+name: unittest
+
+on:
+  push
+
+jobs:
+  python_unittest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11'
+      - name: Install poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+      - name: Install dependencies
+        run: |
+          cd page_notifier
+          poetry install
+      - name: Run tests
+        run: |
+          cd page_notifier
+          poetry run python -m unittest discover tests
